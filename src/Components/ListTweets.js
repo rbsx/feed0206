@@ -1,5 +1,6 @@
 import React from "react";
 import TweetItem from "./TweetItem";
+import { refreshPosition } from "../utils/utils";
 
 const ListTweets = props => {
   let tweet = props.listTweet.map(item => (
@@ -11,7 +12,9 @@ const ListTweets = props => {
       username={item.username}
     />
   ));
-  return <ul>{tweet}</ul>;
+  return (
+    <ul onScroll={e => refreshPosition(e, props.updatePosition)}>{tweet}</ul>
+  );
 };
 
 export default ListTweets;

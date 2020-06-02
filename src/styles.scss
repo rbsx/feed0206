@@ -1,3 +1,7 @@
+body{
+	overflow-y: hidden;
+	height:100vh;
+}
 .app{
 	display: flex;
 	flex-direction: column;
@@ -6,6 +10,7 @@
 	width: 90%;
 	margin: auto;
 	font-family: 'Lucida Sans', Verdana, sans-serif;
+	height: 100vh;
 }
 
 button{
@@ -36,6 +41,8 @@ ul{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	
 	li{
 		list-style: none;

@@ -47,3 +47,9 @@ export const updateOldTweet = async (updateList, list) => {
     updateList(newFeed);
   }
 };
+
+export const refreshPosition = (e, updatePosition) => {
+  let clientHeight = window.getElementByTagName("ul").clientHeight;
+  updatePosition(window.pageYOffset);
+  console.log("new position: ", clientHeight);
+};
