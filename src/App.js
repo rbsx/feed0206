@@ -10,6 +10,7 @@ import "./styles.scss";
 
 const App = () => {
   const [list, updateList] = React.useState([]);
+  const [position, updatePosition] = React.useState(window.pageYOffset);
 
   React.useEffect(() => {
     if (list.length !== 0 && list[0].id >= 10000) {
@@ -32,7 +33,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <ListTweets listTweet={list} />
+      <ListTweets listTweet={list} updatePosition={updatePosition} />
       {list.length > 0 ? (
         <button onClick={() => updateOldTweet(updateList, list)}>back</button>
       ) : null}
