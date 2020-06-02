@@ -1,0 +1,83 @@
+.app{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin: auto;
+	font-family: 'Lucida Sans', Verdana, sans-serif;
+}
+
+button{
+	background-color: white;
+	border: 2px solid #783BF9;
+	padding: 0.7rem;
+	min-width: 5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #783BF9;
+	transition: 200ms all ease-in;
+	cursor: pointer;
+	outline: none;
+	border-radius: 5px;
+
+	&:hover{
+		background-color: #783BF9;
+		color: white;
+	}
+}
+
+ul{
+	list-style: none;
+	width: 90%;
+	margin: auto;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	li{
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 1.2rem;
+		box-shadow: 2px 2px 7px #E0E0E0;
+		border: 1px solid #E0E0E0;
+		border-left: 3px solid #783BF9;
+		border-radius: 0.4rem;
+		padding: 0.5rem;
+		transition: 1s all ease;
+		animation-name: slidein;
+		animation-duration: 700ms;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		
+		.avatar{
+			width: 4rem;
+			height: 4rem;
+			margin-right: 1rem;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center center;
+		}
+		
+		.desc{
+			width: 80%;
+		}
+	}
+}
+@keyframes slidein {
+  from {
+		margin-left: -15rem;
+		opacity: 0;
+  }
+
+  to {
+		margin-left: 0;
+		opacity: 1;
+  }
+}
